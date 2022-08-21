@@ -10,36 +10,39 @@ btnCrear.addEventListener('click',() => {
     divMagico.style.width = anchoDiv();
     divMagico.style.height = altoDiv();
     divContenedor.style.justifyContent= posicionDiv();
-
 })
 
     function crearColorDiv() {
         let valores= '0123456789ABCDEF';
         let color= '#' ;
-                for(let i= 0; i < 6 ; i++) {
+            for(let i= 0; i < 6 ; i++) {
     color = color + valores[Math.floor(Math.random()* valores.length)];
     }
 return color;
 }
+
+    function anchoDiv() {
+            for(let i = 0 ; i < 500 ; i++) {
+width= [Math.floor(Math.random()*500)] + 'px';
+}
+return width;
+}
+
+    function altoDiv() {
+            for(let i = 0 ; i < 500 ; i++) {
+height= [Math.floor(Math.random()*500)] + 'px';
+}
+return height;
+}
+
     function posicionDiv() {
-        let arrPosiciones=['left','right' ,'center'];
+        let arrPosiciones=['Left','Right' ,'Center'];
             for(let i= 0; i< arrPosiciones.length  ; i++) {
     posiciones = arrPosiciones[Math.floor(Math.random()* arrPosiciones.length)];
     }
 return posiciones;
 } 
-    function anchoDiv() {
-            for(let i = 0 ; i < 500 ; i++) {
-    width= [Math.floor(Math.random()*500)] + 'vw';
-    }
-return width;
-}
-    function altoDiv() {
-            for(let i = 0 ; i < 500 ; i++) {
-    height= [Math.floor(Math.random()*500)] + 'vh';
-    }
-return height;
-}
+
 /*
 let tamañoDiv = () => {
 
