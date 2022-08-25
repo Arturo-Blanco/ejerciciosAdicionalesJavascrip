@@ -1,7 +1,6 @@
 "use strict";
 
 let btnEnviar=document.querySelector('.btnSend');
-
 btnEnviar.addEventListener('click', ()=> {
 validateName();
 validateSurname();
